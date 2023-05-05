@@ -2,11 +2,16 @@
   "name": "coffee",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve": "nx run-many --parallel --target=serve --all",
+    "api": "nx serve api --skip-nx-cache",
+    "auth-service": "nx serve auth-service --skip-nx-cache"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^9.1.1",
     "@nestjs/core": "^9.1.1",
+    "@nestjs/microservices": "^9.4.0",
     "@nestjs/platform-express": "^9.1.1",
     "axios": "^1.0.0",
     "reflect-metadata": "^0.1.13",
